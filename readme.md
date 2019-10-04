@@ -24,6 +24,7 @@ Please comment if you have any suggestion, find a correction or want to apprecia
   - [4.3 Machine Learning with Spark: Nick Pentreath ](#43)  
   - [4.4 https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/ ](#44)   
   - [4.5 Programming Guides from http://spark.apache.org/docs/latest/ ](#45)  
+  - [4.6 Spark-The Definite Guide from https://github.com/databricks/Spark-The-Definitive-Guide ](#46)  
 - [5. SPARKSESSION & PYSPARK.SQL.FUNCTIONS f](#50)  
 
 
@@ -67,7 +68,7 @@ spark
 ```
 
 > [Spark code comments from Git](https://github.com/apache/spark)  
-> https://github.com/vivek-bombatkar/Spark-with-Python---My-learning-notes-  
+> [PySpark notes by vivek-bombatkar](https://github.com/vivek-bombatkar/Spark-with-Python---My-learning-notes-)  
 > https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/  
 > https://www.slideshare.net/cloudera/top-5-mistakes-to-avoid-when-writing-apache-spark-applications  
 > https://pages.databricks.com/rs/094-YMS-629/images/7-steps-for-a-developer-to-learn-apache-spark.pdf   
@@ -95,13 +96,16 @@ spark
 
 
 ### <a name="a"></a>a. Spark Concept  
-> https://github.com/vivek-bombatkar/Spark-with-Python---My-learning-notes-  
-> http://spark.apache.org/   
-> https://databricks.gitbooks.io/databricks-spark-reference-applications/content/index.html  
-> https://thachtranerc.wordpress.com/2017/07/10/databricks-developer-certifcation-for-apache-spark-finally-i-made-it/  
+> [PySpark notes by vivek-bombatkar](https://github.com/vivek-bombatkar/Spark-with-Python---My-learning-notes-)
+> [Apache Spark](http://spark.apache.org/)
+> [Databricks Reference Apps](https://databricks.gitbooks.io/databricks-spark-reference-applications/content/index.html)
+> [Finally I made it](https://thachtranerc.wordpress.com/2017/07/10/databricks-developer-certifcation-for-apache-spark-finally-i-made-it/)
 > videos :  
-  > https://www.youtube.com/watch?v=7ooZ4S7Ay6Y    
-  > https://www.youtube.com/watch?v=tFRPeU5HemU  
+  > [Advanced Apache Spark Training - Sameer Farooqui (Databricks)](https://www.youtube.com/watch?v=7ooZ4S7Ay6Y)
+  > [Tuning and Debugging Apache Spark](https://www.youtube.com/watch?v=kkOG_aJ9KjQ)
+  > [A Deeper Understanding of Spark Internals – Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
+  > [Anomaly Detection with Apache Spark – Sean Owen](https://www.youtube.com/watch?v=TC5cKYBZAeI)
+  > [Databricks Spark Certification Spark 2.x Practice Questions 2019](https://www.youtube.com/watch?v=tFRPeU5HemU)
 
 
 - a.1 Spark code brackdown to optimizer    
@@ -153,7 +157,7 @@ rdd5.collect() #actions - stage 3
   - It is also possible to customize the waiting time for each level by setting spark.locality.wait.node, etc.   
   - You should increase this setting if your tasks are long and see poor locality, but the default usually works well.  
 
-> a.10  Performance Tunning
+> a.9  Performance Tunning
 - http://spark.apache.org/docs/latest/tuning.html  
 - when tuning a Spark application – most importantly, data serialization and memory tuning, CPU, network bandwidth, memory  
 - Data Serialization:  
@@ -622,7 +626,9 @@ sdf_grp.groupBy("id").apply(fun_1).show()
 - when dealing with float or double types that does not exactly match standard floating point semantics.
 
 
- 
+  
+## <a name="46"></a>4.6 "Spark-The Definite Guide" from https://github.com/databricks/Spark-The-Definitive-Guide
+
  
  ## <a name="50"></a>5. SPARKSESSION & PYSPARK.SQL.FUNCTIONS f   
  > http://spark.apache.org/docs/2.2.0/api/python/pyspark.sql.html  
@@ -791,3 +797,4 @@ sdf_1.join(sdf_2,sdf_1.col_1.eqNullSafe(sdf_2.col_1))
     ```# of Tasks required for Stage = # of Spark RDD / Data Frame Partitions```
     
     
+
