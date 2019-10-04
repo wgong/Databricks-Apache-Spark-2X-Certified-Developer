@@ -96,16 +96,16 @@ spark
 
 
 ### <a name="a"></a>a. Spark Concept  
-> [PySpark notes by vivek-bombatkar](https://github.com/vivek-bombatkar/Spark-with-Python---My-learning-notes-)
-> [Apache Spark](http://spark.apache.org/)
-> [Databricks Reference Apps](https://databricks.gitbooks.io/databricks-spark-reference-applications/content/index.html)
-> [Finally I made it](https://thachtranerc.wordpress.com/2017/07/10/databricks-developer-certifcation-for-apache-spark-finally-i-made-it/)
-> videos :  
-  > [Advanced Apache Spark Training - Sameer Farooqui (Databricks)](https://www.youtube.com/watch?v=7ooZ4S7Ay6Y)
-  > [Tuning and Debugging Apache Spark](https://www.youtube.com/watch?v=kkOG_aJ9KjQ)
-  > [A Deeper Understanding of Spark Internals – Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
-  > [Anomaly Detection with Apache Spark – Sean Owen](https://www.youtube.com/watch?v=TC5cKYBZAeI)
-  > [Databricks Spark Certification Spark 2.x Practice Questions 2019](https://www.youtube.com/watch?v=tFRPeU5HemU)
+* [PySpark notes by vivek-bombatkar](https://github.com/vivek-bombatkar/Spark-with-Python---My-learning-notes-)
+* [Apache Spark](http://spark.apache.org/)
+* [Databricks Reference Apps](https://databricks.gitbooks.io/databricks-spark-reference-applications/content/index.html)
+* [Finally I made it](https://thachtranerc.wordpress.com/2017/07/10/databricks-developer-certifcation-for-apache-spark-finally-i-made-it/)
+* videos :  
+  * [Advanced Apache Spark Training - Sameer Farooqui (Databricks)](https://www.youtube.com/watch?v=7ooZ4S7Ay6Y)
+  * [Tuning and Debugging Apache Spark](https://www.youtube.com/watch?v=kkOG_aJ9KjQ)
+  * [A Deeper Understanding of Spark Internals – Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
+  * [Anomaly Detection with Apache Spark – Sean Owen](https://www.youtube.com/watch?v=TC5cKYBZAeI)
+  * [Databricks Spark Certification Spark 2.x Practice Questions 2019](https://www.youtube.com/watch?v=tFRPeU5HemU)
 
 
 - a.1 Spark code brackdown to optimizer    
@@ -627,11 +627,11 @@ sdf_grp.groupBy("id").apply(fun_1).show()
 
 
   
-## <a name="46"></a>4.6 "Spark-The Definite Guide" from https://github.com/databricks/Spark-The-Definitive-Guide
+## <a name="46"></a>4.6 [Spark-The Definite Guide](https://github.com/databricks/Spark-The-Definitive-Guide)
 
  
- ## <a name="50"></a>5. SPARKSESSION & PYSPARK.SQL.FUNCTIONS f   
- > http://spark.apache.org/docs/2.2.0/api/python/pyspark.sql.html  
+ ## <a name="50"></a>5. [SPARKSESSION & PYSPARK.SQL.FUNCTIONS](http://spark.apache.org/docs/2.2.0/api/python/pyspark.sql.html)
+  
  - functions could be passed to API to perform operations  
  - like aggregate functions used with 'agg' API  
  
