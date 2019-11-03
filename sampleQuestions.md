@@ -26,7 +26,7 @@ perp course:
 
 - 40% sql df   
 	R W DF, reader class, writer class  
-	T va A, wide vs narrow  
+	T (Transformation) va A (Action), wide (shuffle across worker nodes) vs narrow (no shuffle)
 	*joins, types, broadcast, cross joins  
 	*UDF  
 	*window functions  
@@ -36,24 +36,27 @@ perp course:
 	rdd - df conversion  
 	*accumulator , accumulator2   
 	wide transf, reduceByKey, groupByKey  
+
 - 10% streaming  
 	sources , sinks  
 	fault tolerance  
 	df manupalation  
 	watermark  
 	checkpoint  
+
 - 5% ml  
 	ml pipeline, transform, estimators  
 	model selection, evaluator, parameter grids  
 	no specific algo logic needed  
+
 - 5% graph  
 	creating graphFrame   
 	inDegrees, outDegrees, bfs, shortestPath, triangleCount   
 	
 - Key API  
 	sparkSession  
-	*Dtataframe/DS  
-	*DFReader, DFWritter -  what source built in, csv json - schema needed, parquit schema inbuilt, comparision  
+	*DataFrame /DS (DataSet)  
+	*DFReader, DFWritter -  what source built in, csv json - schema needed, parquet schema inbuilt, comparision  
 	*column ,row - manupalation,   
 	spark.sql.functions - *broadcast   
 	
@@ -143,7 +146,7 @@ D.
 +-----+-----+
  ```
 
-- 5. Given an instance of SparkSession named spark, which one of the following code fragments executemost quickly and produce a DataFrame with the specified schema? Assume a variable named schema with the correctly structured StructType to represent the DataFrame's schema has already been initialized.
+- 5. Given an instance of SparkSession named spark, which one of the following code fragments execute most quickly and produce a DataFrame with the specified schema? Assume a variable named schema with the correctly structured StructType to represent the DataFrame's schema has already been initialized.
 
 Sample data:
  
@@ -369,7 +372,7 @@ pipe(command, [envVars])
 coalesce(numPartitions)  
 repartition(numPartitions)  
 repartitionAndSortWithinPartitions(partitioner)  
-***cache()  
+cache()  
 printSchema()
 select()
 limit()
@@ -471,7 +474,7 @@ Supported : json, parquet, jdbc, orc, libsvm, csv, text
 
 8. With cache(), you use only the default storage level MEMORY_ONLY
 
-9. partitions , shuffal partitons, default parallelism
+9. partitions , shuffle partitons, default parallelism
 
 10. persist()
 
@@ -489,14 +492,18 @@ Supported : json, parquet, jdbc, orc, libsvm, csv, text
 
 17. coalesce(numPartitions) vs repartition()
     - Returns a new DataFrame that has exactly numPartitions partitions.
+
     - coalesce uses existing partitions to minimize the amount of data that's shuffled. 
     - repartition creates new partitions and does a full shuffle.  
+
     - coalesce results in partitions with different amounts of data (sometimes partitions that have much different sizes) 
     - and repartition results in roughly equal sized partitions.
+
     - Is coalesce or repartition faster?
         - coalesce may run faster than repartition, 
         - but unequal sized partitions are generally slower to work with than equal sized partitions. 
         - You'll usually need to repartition datasets after filtering a large data set. 
+        
         - I've found repartition to be faster overall because Spark is built to work with equal sized partitions.
 
 18. catalyst : Accumalator

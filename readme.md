@@ -7,6 +7,8 @@ Please comment if you have any suggestion, find a correction or want to apprecia
 
 > Follow me on,  [LinkedIn](https://www.linkedin.com/in/vivek-bombatkar/), [Github](https://github.com/vivek-bombatkar)  
 
+https://github.com/vivek-bombatkar/Databricks-Apache-Spark-2X-Certified-Developer.git
+
 
 ## Index  
 - [1. GENERAL IMP LINKS](#10)  
